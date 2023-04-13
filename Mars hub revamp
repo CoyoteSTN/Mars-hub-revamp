@@ -1,0 +1,50 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Universal Mars hub", "Sentinel")
+
+--MAIN TAB
+local Main = Window:NewTab("Main")
+
+--KILL TYPE
+local Kill = Window:NewTab("Kill")
+
+local LocalPlayer = Window:NewTab("Local")
+
+local Main = Main:NewSection("Main")
+
+local Kill = Kill:NewSection("Kill")
+
+local LocalPlayer = LocalPlayer:NewSection("Local")
+
+-------------------------------------------------------------------
+Kill:NewTextBox("kill player", "[ight]", function(txt)
+	
+end)
+
+Kill:NewButton("null zone", "null's you so you can bring player's", function()
+    -- Change these values to the coordinates you want to teleport the player to
+local targetX = 0
+local targetY = 9999999
+local targetZ = 0
+
+-- Find the player you want to teleport
+local player = game:GetService("Players").LocalPlayer
+
+-- Create a new CFrame at the target position
+local targetCFrame = CFrame.new(targetX, targetY, targetZ)
+
+-- Teleport the player to the target position
+player.Character.HumanoidRootPart.CFrame = targetCFrame
+end)
+
+
+
+Main:NewButton("kewl AKA the joint", "tp's you to the chill spot", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3.90065598487854, 13.464056015014648, -214.41790771484375)
+end)
+
+
+
+Kill:NewTextBox("kill this player", "stupi thing i made", function(txt)
+	
+end)
